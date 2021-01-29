@@ -62,8 +62,24 @@ range(2, -2, -0.5) // throw Error
 
 #### stringifyJSONStream
 
+```ts
+function stringifyJSONStream(iterable: Iterable<unknown>): Iterable<string>
+```
+
 #### stringifyJSONStreamAsync
+
+```ts
+function stringifyNDJSONStreamAsync(iterable: AsyncIterable<unknown>): AsyncIterable<string>
+```
 
 #### stringifyNDJSONStream
 
+```ts
+function stringifyNDJSONStream(iterable: Iterable<unknown>): Iterable<string>
+```
+
 #### stringifyNDJSONStreamAsync
+
+```ts
+function stringifyNDJSONStreamAsync(iterable: AsyncIterable<unknown>): AsyncIterable<string>
+```
