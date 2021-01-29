@@ -83,3 +83,11 @@ function stringifyNDJSONStream(iterable: Iterable<unknown>): Iterable<string>
 ```ts
 function stringifyNDJSONStreamAsync(iterable: AsyncIterable<unknown>): AsyncIterable<string>
 ```
+
+#### sse
+
+```ts
+function sse(text: string): Iterable<string>
+```
+
+Split text to Server-Sent Event lines.
