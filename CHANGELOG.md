@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/BlackGlory/iterable-operator/compare/v0.1.2...v0.1.3) (2021-01-29)
+
+
+### Bug Fixes
+
+* exports ([2a9b2e9](https://github.com/BlackGlory/iterable-operator/commit/2a9b2e9b73929e9e4afdd0815d38a510449e2416))
+
 ### [0.1.2](https://github.com/BlackGlory/iterable-operator/compare/v0.1.1...v0.1.2) (2021-01-29)
 
 
