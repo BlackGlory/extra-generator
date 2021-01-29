@@ -6,6 +6,11 @@ test('Head', () => {
   , 'countdown'
   , 'countup'
   , 'range'
+
+  , 'stringifyJSONStream'
+  , 'stringifyJSONStreamAsync'
+  , 'stringifyNDJSONStream'
+  , 'stringifyNDJSONStreamAsync'
   ].sort()
 
   const actualExports = Object.keys(Head).sort()
