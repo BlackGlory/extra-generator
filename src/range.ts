@@ -1,4 +1,4 @@
-import { assert } from 'typed-assert'
+import { assert } from '@blackglory/errors'
 
 /**
  * @throws {Error}

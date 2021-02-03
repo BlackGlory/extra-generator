@@ -74,7 +74,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@blackglory/types": "^0.2.9",
-    "typed-assert": "^1.0.7"
+    "@blackglory/errors": "^1.1.1",
+    "@blackglory/types": "^0.2.9"
   }
 }
