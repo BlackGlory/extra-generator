@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/BlackGlory/iterable-operator/compare/v0.1.6...v0.2.0) (2021-03-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* rewrite sse
+
+* rewrite sse ([ec5075a](https://github.com/BlackGlory/iterable-operator/commit/ec5075abd2854c36a848579e3e0bffef98d087a2))
+
 ### [0.1.6](https://github.com/BlackGlory/iterable-operator/compare/v0.1.5...v0.1.6) (2021-03-07)
 
 ### [0.1.5](https://github.com/BlackGlory/iterable-operator/compare/v0.1.4...v0.1.5) (2021-02-07)
