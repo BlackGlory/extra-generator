@@ -87,7 +87,12 @@ function stringifyNDJSONStreamAsync(iterable: AsyncIterable<unknown>): AsyncIter
 #### sse
 
 ```ts
-function sse(text: string): Iterable<string>
-```
+interface IMessage {
+  event?: string
+  data: string
+  id?: string
+  retry?: number
+}
 
-Split text to Server-Sent Event lines.
+function sse(message: IMessage): Iterable<string>
+```

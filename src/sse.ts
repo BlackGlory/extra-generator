@@ -1,15 +1,19 @@
-export function* sse(text: string): Iterable<string> {
-  const lines = text.split('\n')
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i]
-    if (i === lastIndex(lines)) {
-      yield `data: ${line}\n\n`
-    } else {
-      yield `data: ${line}\n`
-    }
-  }
+export interface IMessage {
+  event?: string
+  data: string
+  id?: string
+  retry?: number
 }
 
-function lastIndex(arr: Array<unknown>): number {
-  return arr.length - 1
+export function* sse(message: IMessage): Iterable<string> {
+  if (message.event) yield `event: ${message.event}\n`
+
+  for (const line of message.data.split('\n')) {
+    yield `data: ${line}\n`
+  }
+
+  if (message.id) yield `id: ${message.id}\n`
+  if (message.retry) yield `retry: ${message.retry}\n`
+
+  yield '\n'
 }
