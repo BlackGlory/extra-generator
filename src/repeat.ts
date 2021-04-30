@@ -1,5 +1,5 @@
-export function* repeat<T>(val: T): Iterable<T> {
-  while (true) {
+export function* repeat<T>(val: T, times: number = Infinity): Iterable<T> {
+  while (times-- > 0) {
     yield val
   }
 }

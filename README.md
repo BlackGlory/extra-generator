@@ -23,11 +23,12 @@ of(1) // [1]
 #### repeat
 
 ```ts
-function repeat<T>(val: T): Iterable<T>
+function repeat<T>(val: T, times: number = Infinity): Iterable<T>
 ```
 
 ```js
 repeat(1) // [1, 1, 1, ...]
+repeat(1, 3) // [1, 1, 1]
 ```
 
 #### countdown
