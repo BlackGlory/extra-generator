@@ -20,6 +20,16 @@ function of<T>(val: T): Iterable<T>
 of(1) // [1]
 ```
 
+#### repeat
+
+```ts
+function repeat<T>(val: T): Iterable<T>
+```
+
+```js
+repeat(1) // [1, 1, 1, ...]
+```
+
 #### countdown
 
 ```ts

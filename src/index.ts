@@ -1,4 +1,6 @@
 export * from './of'
+export * from './repeat'
+
 export * from './countdown'
 export * from './countup'
 export * from './range'

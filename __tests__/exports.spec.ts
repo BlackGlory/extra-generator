@@ -3,6 +3,8 @@ import * as Head from '@src/index'
 test('Head', () => {
   const expectedExports: string[] = [
     'of'
+  , 'repeat'
+
   , 'countdown'
   , 'countup'
   , 'range'
