@@ -2,7 +2,11 @@ import { stringifyNDJSONStreamAsync } from '@src/stringify-ndjson-stream-async'
 import { toAsyncIterable, toArrayAsync } from 'iterable-operator'
 import '@blackglory/jest-matchers'
 
-describe('stringifyNDJSONStreamAsync(iterable: AsyncIterable<unknown>): AsyncIterable<string>', () => {
+describe(`
+  stringifyNDJSONStreamAsync(
+    iterable: AsyncIterable<unknown>
+  ): AsyncIterable<string>
+`, () => {
   it('yield NDJSON', async () => {
     const arr = toAsyncIterable([1, 2])
 

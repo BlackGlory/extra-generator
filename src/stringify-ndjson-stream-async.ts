@@ -1,5 +1,8 @@
-export async function* stringifyNDJSONStreamAsync(asyncIterable: AsyncIterable<unknown>): AsyncIterable<string> {
+export async function* stringifyNDJSONStreamAsync(
+  asyncIterable: AsyncIterable<unknown>
+): AsyncIterable<string> {
   const iter = asyncIterable[Symbol.asyncIterator]()
+
   const firstResult = await iter.next()
   if (!firstResult.done) yield JSON.stringify(firstResult.value)
   while (true) {
