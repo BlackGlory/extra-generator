@@ -16,7 +16,7 @@
   ],
   "main": "lib/es2018/index.js",
   "types": "lib/es2018/index.d.ts",
-  "repository": "git@github.com:BlackGlory/iterable-operator.git",
+  "repository": "git@github.com:BlackGlory/extra-generator.git",
   "author": "BlackGlory <woshenmedoubuzhidao@blackglory.me>",
   "license": "MIT",
   "scripts": {
