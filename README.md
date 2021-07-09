@@ -8,9 +8,9 @@ npm install --save extra-generator
 yarn add extra-generator
 ```
 
-### API
+## API
 
-#### of
+### of
 
 ```ts
 function of<T>(val: T): Iterable<T>
@@ -20,7 +20,7 @@ function of<T>(val: T): Iterable<T>
 of(1) // [1]
 ```
 
-#### repeat
+### repeat
 
 ```ts
 function repeat<T>(val: T, times: number = Infinity): Iterable<T>
@@ -32,7 +32,7 @@ repeat(1, 3) // [1, 1, 1]
 repeat(1, 0) // []
 ```
 
-#### countdown
+### countdown
 
 ```ts
 function countdown(begin: number, end: number): Iterable<number>
@@ -44,7 +44,7 @@ countdown(1, 1) // [1]
 countdown(0, 1) // []
 ```
 
-#### countup
+### countup
 
 ```ts
 function countup(begin: number, end: number): Iterable<number>
@@ -56,7 +56,7 @@ countup(1, 1) // [1]
 countup(1, 0) // []
 ```
 
-#### range
+### range
 
 ```ts
 function range(start: number, end: number, step: number = 1): Iterable<number>
@@ -72,31 +72,31 @@ range(2, -2, 0) // throw Error
 range(2, -2, -0.5) // throw Error
 ```
 
-#### stringifyJSONStream
+### stringifyJSONStream
 
 ```ts
 function stringifyJSONStream(iterable: Iterable<unknown>): Iterable<string>
 ```
 
-#### stringifyJSONStreamAsync
+### stringifyJSONStreamAsync
 
 ```ts
 function stringifyNDJSONStreamAsync(iterable: AsyncIterable<unknown>): AsyncIterable<string>
 ```
 
-#### stringifyNDJSONStream
+### stringifyNDJSONStream
 
 ```ts
 function stringifyNDJSONStream(iterable: Iterable<unknown>): Iterable<string>
 ```
 
-#### stringifyNDJSONStreamAsync
+### stringifyNDJSONStreamAsync
 
 ```ts
 function stringifyNDJSONStreamAsync(iterable: AsyncIterable<unknown>): AsyncIterable<string>
 ```
 
-#### sse
+### sse
 
 ```ts
 interface IMessage {
