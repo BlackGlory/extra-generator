@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/BlackGlory/extra-generator/compare/v0.2.7...v0.2.8) (2021-07-13)
+
+
+### Bug Fixes
+
+* close unexhausted iterators ([9a3c09a](https://github.com/BlackGlory/extra-generator/commit/9a3c09a8e56a30b9349e7dbed8826ba7234b1d5f))
+* close unexhausted iterators ([d571d95](https://github.com/BlackGlory/extra-generator/commit/d571d952a6549622bcaf5e30a347cf65d005de4d))
+
 ### [0.2.7](https://github.com/BlackGlory/extra-generator/compare/v0.2.6...v0.2.7) (2021-07-09)
 
 ### [0.2.6](https://github.com/BlackGlory/iterable-operator/compare/v0.2.5...v0.2.6) (2021-05-16)
