@@ -1,13 +1,17 @@
-export function* stringifyJSONStream(iterable: Iterable<unknown>): Iterable<string> {
+export function* stringifyJSONStream<T>(iterable: Iterable<T>): Iterable<string> {
   const iter = iterable[Symbol.iterator]()
+  let done: boolean | undefined
 
-  const firstResult = iter.next()
-  yield '['
-  if (!firstResult.done) yield JSON.stringify(firstResult.value)
-  while (true) {
-    const result = iter.next()
-    if (result.done) break
-    yield ',' + JSON.stringify(result.value)
+  try {
+    let value: T
+    ;({ value, done } = iter.next())
+    yield '['
+    if (!done) yield JSON.stringify(value)
+    while ({ value, done } = iter.next(), !done) {
+      yield ',' + JSON.stringify(value)
+    }
+    yield ']'
+  } finally {
+    if (!done) iter.return?.()
   }
-  yield ']'
 }
