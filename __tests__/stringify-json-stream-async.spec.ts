@@ -5,8 +5,8 @@ import { Readable } from 'stream'
 import { waitForEventEmitter } from '@blackglory/wait-for'
 
 describe(`
-  stringifyNDJSONStreamAsync(
-    iterable: AsyncIterable<unknown>
+  stringifyNDJSONStreamAsync<T>(
+    iterable: AsyncIterable<T>
   ): AsyncIterable<string>
 `, () => {
   it('yield JSON', async () => {

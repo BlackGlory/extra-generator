@@ -3,8 +3,8 @@ import { toAsyncIterable, toArrayAsync } from 'iterable-operator'
 import '@blackglory/jest-matchers'
 
 describe(`
-  stringifyNDJSONStreamAsync(
-    iterable: AsyncIterable<unknown>
+  stringifyNDJSONStreamAsync<T>(
+    iterable: AsyncIterable<T>
   ): AsyncIterable<string>
 `, () => {
   it('yield NDJSON', async () => {

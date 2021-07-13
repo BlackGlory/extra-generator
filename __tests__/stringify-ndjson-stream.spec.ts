@@ -2,7 +2,7 @@ import { stringifyNDJSONStream } from '@src/stringify-ndjson-stream'
 import { toArray } from 'iterable-operator'
 import '@blackglory/jest-matchers'
 
-describe('stringifyNDJSONStream(iterable: Iterable<unknown>): Iterable<string>', () => {
+describe('stringifyNDJSONStream<T>(iterable: Iterable<T>): Iterable<string>', () => {
   it('yield NDJSON', () => {
     const arr = [1, 2]
 

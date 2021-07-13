@@ -4,7 +4,7 @@ import '@blackglory/jest-matchers'
 import { Readable } from 'stream'
 import { waitForEventEmitter } from '@blackglory/wait-for'
 
-describe('stringifyJSONStream(iterable: Iterable<unknown>): Iterable<string>', () => {
+describe('stringifyJSONStream<T>(iterable: Iterable<T>): Iterable<string>', () => {
   it('yield JSON', () => {
     const arr = [1, 2]
 
