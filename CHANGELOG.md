@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.10](https://github.com/BlackGlory/extra-generator/compare/v0.2.9...v0.2.10) (2021-07-14)
+
+
+### Features
+
+* expose `done` from ReusableIterable, ResuableAsyncIterable ([685dc93](https://github.com/BlackGlory/extra-generator/commit/685dc93d6e8bc8f7d0fd73d7fcb0642440adede9))
+
 ### [0.2.9](https://github.com/BlackGlory/extra-generator/compare/v0.2.8...v0.2.9) (2021-07-14)
 
 
