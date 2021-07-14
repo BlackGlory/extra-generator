@@ -113,6 +113,8 @@ function sse(message: IMessage): Iterable<string>
 
 ```ts
 class ReusableIterable<T> implements IReusableIterable<T> {
+  get done(): boolean | undefined
+
   constructor(iterable: Iterable<T>)
 
   close(): void
@@ -123,6 +125,8 @@ class ReusableIterable<T> implements IReusableIterable<T> {
 
 ```ts
 class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
+  get done(): boolean | undefined
+
   constructor(iterable: AsyncIterable<T>)
 
   close(): Promise<void>

@@ -12,8 +12,12 @@ describe('ReusableIterable<T>', () => {
     for (const _ of reusableGen) {
       break
     }
+    const doneAfterBreak = reusableGen.done
     const result = toArray(reusableGen)
+    const doneAfterExhaust = reusableGen.done
 
+    expect(doneAfterBreak).toBeFalsy()
+    expect(doneAfterExhaust).toBeTruthy()
     expect(result).toEqual([2])
   })
 
@@ -28,8 +32,10 @@ describe('ReusableIterable<T>', () => {
       break
     }
     reusableGen.close()
+    const doneAfterClose = reusableGen.done
     const result = toArray(reusableGen)
 
+    expect(doneAfterClose).toBeTruthy()
     expect(result).toEqual([])
   })
 })
