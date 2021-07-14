@@ -11,3 +11,6 @@ export * from './stringify-ndjson-stream'
 export * from './stringify-ndjson-stream-async'
 
 export * from './sse'
+
+export * from './reusable-iterable'
+export * from './reusable-async-iterable'

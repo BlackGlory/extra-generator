@@ -108,3 +108,23 @@ interface IMessage {
 
 function sse(message: IMessage): Iterable<string>
 ```
+
+### ReusableIterable
+
+```ts
+class ReusableIterable<T> implements IReusableIterable<T> {
+  constructor(iterable: Iterable<T>)
+
+  close(): void
+}
+```
+
+### ReusableAsyncIterable
+
+```ts
+class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
+  constructor(iterable: AsyncIterable<T>)
+
+  close(): Promise<void>
+}
+```

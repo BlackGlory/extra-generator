@@ -15,6 +15,9 @@ test('Head', () => {
   , 'stringifyNDJSONStreamAsync'
 
   , 'sse'
+
+  , 'ReusableIterable'
+  , 'ReusableAsyncIterable'
   ].sort()
 
   const actualExports = Object.keys(Head).sort()
