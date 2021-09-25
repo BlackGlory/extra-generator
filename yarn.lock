@@ -1177,18 +1177,6 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.8.tgz#edf1bf1dbf4e04413ca8e5b17b3b7d7d54b59818"
   integrity sha512-YSBPTLTVm2e2OoQIDYx8HaeWJ5tTToLH67kXR7zYNGupXMEHa2++G8k+DczX2cFVgalypqtyZIcU19AFcmOpmg==
 
-"@types/lodash.once@^4.1.6":
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/@types/lodash.once/-/lodash.once-4.1.6.tgz#f6ea46e3426bc3494b72a45e65efed440103b967"
-  integrity sha512-kawTe2cBNZ5OI4CvTJT9cs8wacGZK4BoakKAGASl/jH3LxflMTuy82wN2U5klYsxYjrABkNWmzgO33volt7urQ==
-  dependencies:
-    "@types/lodash" "*"
-
-"@types/lodash@*":
-  version "4.14.171"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.171.tgz#f01b3a5fe3499e34b622c362a46a609fdb23573b"
-  integrity sha512-7eQ2xYLLI/LsicL2nejW9Wyko3lcpN6O/z0ZLHrEQsg280zIdCv1t/0m6UtBjUHokCGBQ3gYTbHzDkZ1xOBwwg==
-
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
@@ -2720,6 +2708,13 @@ extra-generator@^0.2.7:
   integrity sha512-fA0z42QX9Zbmxl3bgL0HiImBaTPnmgYUBNlFhsXorOFfsti+dDxb/91us0vsL+eiBi9x7GtPOEjA4TLnXc/JzA==
   dependencies:
     "@blackglory/errors" "^1.1.2"
+
+extra-lazy@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/extra-lazy/-/extra-lazy-0.1.0.tgz#9fda740ffd3e07dd899fca526c4e4c0a04469982"
+  integrity sha512-dE5jT6rKQSbRGiNTVfe/PQBi7d+cbHEZLyuUSC5c0nqOzngMb9QqptNxlHIQ6me+gWNVOH6fHzX1T+RGB9YsSA==
+  dependencies:
+    lodash.once "^4.1.1"
 
 extra-logger@^0.5.4:
   version "0.5.5"

@@ -1,4 +1,4 @@
-import lazy from 'lodash.once'
+import { lazy } from 'extra-lazy'
 
 interface IReusableIterable<T> extends Iterable<T> {
   close(): void

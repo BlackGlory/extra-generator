@@ -1,4 +1,4 @@
-import lazy from 'lodash.once'
+import { lazy } from 'extra-lazy'
 
 interface IReusableAsyncIterable<T> extends AsyncIterable<T> {
   close(): Promise<void>
