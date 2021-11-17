@@ -1,6 +1,6 @@
 import * as Head from '@src/index'
 
-test('Head', () => {
+test('Exports', () => {
   const expectedExports: string[] = [
     'of'
   , 'repeat'
@@ -18,6 +18,8 @@ test('Head', () => {
 
   , 'ReusableIterable'
   , 'ReusableAsyncIterable'
+
+  , 'timestampBasedId'
   ].sort()
 
   const actualExports = Object.keys(Head).sort()

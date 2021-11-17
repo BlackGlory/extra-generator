@@ -132,3 +132,9 @@ class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
   close(): Promise<void>
 }
 ```
+
+### timestampBasedId
+
+```ts
+function timestampBasedId(): Iterator<[timestamp: number, num: number]>
+```
