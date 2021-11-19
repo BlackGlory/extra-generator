@@ -3,7 +3,7 @@ import { getError } from 'return-style'
 import { range } from '@src/range'
 import '@blackglory/jest-matchers'
 
-describe('range(start: number, end: number): Iterable<number>', () => {
+describe('range(start: number, end: number): IterableIterator<number>', () => {
   describe('start = end', () => {
     it('return empty iterable', () => {
       const iter = range(1, 1)
@@ -35,7 +35,7 @@ describe('range(start: number, end: number): Iterable<number>', () => {
   })
 })
 
-describe('range(start: number, end: number, step: number) => Iterable<number>', () => {
+describe('range(start: number, end: number, step: number) => IterableIterator<number>', () => {
   describe('step > 0', () => {
     it('return iterable[start:end] by step', () => {
       const iter = range(1, -1, 0.5)

@@ -13,7 +13,7 @@ yarn add extra-generator
 ### of
 
 ```ts
-function of<T>(val: T): Iterable<T>
+function of<T>(val: T): IterableIterator<T>
 ```
 
 ```js
@@ -23,7 +23,7 @@ of(1) // [1]
 ### repeat
 
 ```ts
-function repeat<T>(val: T, times: number = Infinity): Iterable<T>
+function repeat<T>(val: T, times: number = Infinity): IterableIterator<T>
 ```
 
 ```js
@@ -35,7 +35,7 @@ repeat(1, 0) // []
 ### countdown
 
 ```ts
-function countdown(begin: number, end: number): Iterable<number>
+function countdown(begin: number, end: number): IterableIterator<number>
 ```
 
 ```js
@@ -47,7 +47,7 @@ countdown(0, 1) // []
 ### countup
 
 ```ts
-function countup(begin: number, end: number): Iterable<number>
+function countup(begin: number, end: number): IterableIterator<number>
 ```
 
 ```js
@@ -59,7 +59,7 @@ countup(1, 0) // []
 ### range
 
 ```ts
-function range(start: number, end: number, step: number = 1): Iterable<number>
+function range(start: number, end: number, step: number = 1): IterableIterator<number>
 // assert(step > 0)
 ```
 

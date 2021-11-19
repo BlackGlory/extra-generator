@@ -2,7 +2,7 @@ import { toArray } from 'iterable-operator'
 import { of } from '@src/of'
 import '@blackglory/jest-matchers'
 
-describe('of<T>(val: T): Iterable<T>', () => {
+describe('of<T>(val: T): IterableIterator<T>', () => {
   it('return Iterable', () => {
     const iter = of(1)
     const arrResult = toArray(iter)

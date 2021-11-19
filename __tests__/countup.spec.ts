@@ -2,7 +2,7 @@ import { toArray } from 'iterable-operator'
 import { countup } from '@src/countup'
 import '@blackglory/jest-matchers'
 
-describe('countup(begin: number, end: number): Iterable<number>', () => {
+describe('countup(begin: number, end: number): IterableIterator<number>', () => {
   describe('begin < end', () => {
     it('return iterable[begin:end]', () => {
       const iter = countup(-2, 2)

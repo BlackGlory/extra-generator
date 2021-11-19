@@ -1,3 +1,3 @@
-export function* of<T>(val: T): Iterable<T> {
+export function* of<T>(val: T): IterableIterator<T> {
   yield val
 }

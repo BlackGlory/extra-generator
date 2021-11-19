@@ -3,7 +3,7 @@ import { repeat } from '@src/repeat'
 import '@blackglory/jest-matchers'
 import { getError } from 'return-style'
 
-describe('repeat<T>(val: T, times: number): Iterable<T>', () => {
+describe('repeat<T>(val: T, times: number): IterableIterator<T>', () => {
   describe('times = 0', () => {
     it('return Iterable', () => {
       const iter = repeat(1, 0)
