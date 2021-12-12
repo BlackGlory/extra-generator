@@ -1,4 +1,5 @@
 import { assert } from '@blackglory/errors'
+import { go } from '@blackglory/go'
 
 export function repeat<T>(val: T, times: number = Infinity): IterableIterator<T> {
   assert(
@@ -6,9 +7,9 @@ export function repeat<T>(val: T, times: number = Infinity): IterableIterator<T>
   , 'The parameter times must be an integer'
   )
 
-  return (function* () {
+  return go(function* () {
     while (times-- > 0) {
       yield val
     }
-  })()
+  })
 }
