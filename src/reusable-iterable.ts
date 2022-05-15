@@ -5,11 +5,11 @@ interface IReusableIterable<T> extends Iterable<T> {
 }
 
 export class ReusableIterable<T> implements IReusableIterable<T> {
-  #done: boolean | undefined
+  private _done: boolean | undefined
   private getIterator: () => Iterator<T>
 
   get done(): boolean | undefined {
-    return this.#done
+    return this._done
   }
 
   constructor(iterable: Iterable<T>) {
@@ -17,8 +17,8 @@ export class ReusableIterable<T> implements IReusableIterable<T> {
   }
 
   close(): void {
-    if (!this.done) {
-      this.#done = true
+    if (!this._done) {
+      this._done = true
       this.getIterator().return?.()
     }
   }
@@ -26,11 +26,11 @@ export class ReusableIterable<T> implements IReusableIterable<T> {
   [Symbol.iterator]() {
     return {
       next: () => {
-        if (this.#done) return { done: true, value: undefined }
+        if (this._done) return { done: true, value: undefined }
 
         const { value, done } = this.getIterator().next()
         if (done) {
-          this.#done = true
+          this._done = true
         }
         return { value, done }
       }
