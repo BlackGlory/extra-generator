@@ -38,7 +38,7 @@ describe(`
     }
 
     const stream = Readable.from(stringifyJSONStreamAsync(gen()))
-    const first = await Promise.race([
+    const [first] = await Promise.race([
       waitForEventEmitter(stream, 'error')
     , waitForEventEmitter(stream, 'data')
     ])

@@ -34,7 +34,7 @@ describe('stringifyJSONStream<T>(iterable: Iterable<T>): Iterable<string>', () =
     }
 
     const stream = Readable.from(stringifyJSONStream(gen()))
-    const first = await Promise.race([
+    const [first] = await Promise.race([
       waitForEventEmitter(stream, 'error')
     , waitForEventEmitter(stream, 'data')
     ])
