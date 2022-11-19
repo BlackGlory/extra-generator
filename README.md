@@ -1,7 +1,5 @@
 # extra-generator
-
 ## Install
-
 ```sh
 npm install --save extra-generator
 # or
@@ -9,9 +7,7 @@ yarn add extra-generator
 ```
 
 ## API
-
 ### of
-
 ```ts
 function of<T>(val: T): IterableIterator<T>
 ```
@@ -21,7 +17,6 @@ of(1) // [1]
 ```
 
 ### repeat
-
 ```ts
 function repeat<T>(val: T, times: number = Infinity): IterableIterator<T>
 ```
@@ -33,7 +28,6 @@ repeat(1, 0) // []
 ```
 
 ### countdown
-
 ```ts
 function countdown(begin: number, end: number): IterableIterator<number>
 ```
@@ -45,7 +39,6 @@ countdown(0, 1) // []
 ```
 
 ### countup
-
 ```ts
 function countup(begin: number, end: number): IterableIterator<number>
 ```
@@ -57,7 +50,6 @@ countup(1, 0) // []
 ```
 
 ### range
-
 ```ts
 function range(start: number, end: number, step: number = 1): IterableIterator<number>
 // assert(step > 0)
@@ -73,31 +65,26 @@ range(2, -2, -0.5) // throw Error
 ```
 
 ### stringifyJSONStream
-
 ```ts
 function stringifyJSONStream<T>(iterable: Iterable<T>): Iterable<string>
 ```
 
 ### stringifyJSONStreamAsync
-
 ```ts
 function stringifyNDJSONStreamAsync<T>(iterable: AsyncIterable<T>): AsyncIterable<string>
 ```
 
 ### stringifyNDJSONStream
-
 ```ts
 function stringifyNDJSONStream<T>(iterable: Iterable<T>): Iterable<string>
 ```
 
 ### stringifyNDJSONStreamAsync
-
 ```ts
 function stringifyNDJSONStreamAsync<T>(iterable: AsyncIterable<T>): AsyncIterable<string>
 ```
 
 ### sse
-
 ```ts
 interface IMessage {
   event?: string
@@ -110,7 +97,6 @@ function sse(message: IMessage): Iterable<string>
 ```
 
 ### ReusableIterable
-
 ```ts
 class ReusableIterable<T> implements IReusableIterable<T> {
   get done(): boolean | undefined
@@ -122,7 +108,6 @@ class ReusableIterable<T> implements IReusableIterable<T> {
 ```
 
 ### ReusableAsyncIterable
-
 ```ts
 class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
   get done(): boolean | undefined
@@ -134,7 +119,6 @@ class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
 ```
 
 ### timestampBasedId
-
 ```ts
 function timestampBasedId(): Iterator<[timestamp: number, num: number]>
 ```
