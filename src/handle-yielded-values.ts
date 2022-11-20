@@ -5,9 +5,9 @@ export function handleYieldedValues<T, Return, Next>(
   let { value, done } = generator.next()
 
   let i = 0
-  do {
+  while (!done) {
     ;({ value, done } = generator.next(fn(value as T, i++)))
-  } while (!done)
+  }
 
   return value as Return
 }

@@ -18,6 +18,31 @@ describe('handleYieldedValuesAsync', () => {
     expect(fn).toBeCalledWith('2', 1)
   })
 
+  test('edge: yield once', async () => {
+    function* gen(): Generator<string, number, number> {
+      return yield '1'
+    }
+    const fn = jest.fn((x: string) => Number(x))
+
+    const result = await handleYieldedValuesAsync(gen(), fn)
+
+    expect(result).toBe(1)
+    expect(fn).toBeCalledTimes(1)
+    expect(fn).toBeCalledWith('1', 0)
+  })
+
+  test('edge: no yield', async () => {
+    function* gen(): Generator<string, number, number> {
+      return 1
+    }
+    const fn = jest.fn((x: string) => Number(x))
+
+    const result = await handleYieldedValuesAsync(gen(), fn)
+
+    expect(result).toBe(1)
+    expect(fn).not.toBeCalled()
+  })
+
   test('generator throws error', async () => {
     const customError = new Error('custom error')
     function* gen(): Generator<string, number, number> {

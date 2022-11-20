@@ -7,9 +7,9 @@ export async function handleYieldedValuesAsync<T, Return, Next>(
   let { value, done } = await generator.next()
 
   let i = 0
-  do {
+  while (!done) {
     ;({ value, done } = await generator.next(await fn(value as T, i++)))
-  } while (!done)
+  }
 
   return value as Return
 }
