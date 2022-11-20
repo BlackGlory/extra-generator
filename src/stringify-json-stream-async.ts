@@ -1,4 +1,6 @@
-export async function* stringifyJSONStreamAsync<T>(asyncIterable: AsyncIterable<T>): AsyncIterable<string> {
+export async function* stringifyJSONStreamAsync<T>(
+  asyncIterable: AsyncIterable<T>
+): AsyncIterable<string> {
   const iter = asyncIterable[Symbol.asyncIterator]()
   let done: boolean | undefined
 

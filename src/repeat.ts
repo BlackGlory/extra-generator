@@ -1,5 +1,4 @@
-import { assert } from '@blackglory/errors'
-import { go } from '@blackglory/go'
+import { go, assert } from '@blackglory/prelude'
 
 export function repeat<T>(val: T, times: number = Infinity): IterableIterator<T> {
   assert(

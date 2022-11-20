@@ -2,7 +2,10 @@ import * as Head from '@src/index'
 
 test('Exports', () => {
   const expectedExports: string[] = [
-    'of'
+    'handleYieldedValues'
+  , 'handleYieldedValuesAsync'
+
+  , 'of'
   , 'repeat'
 
   , 'countdown'

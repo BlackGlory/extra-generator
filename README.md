@@ -7,6 +7,26 @@ yarn add extra-generator
 ```
 
 ## API
+### handleYieldedValues
+```ts
+function handleYieldedValues<T, Return, Next>(
+  generator: Generator<T, Return, Next>
+, fn: (value: T, index: number) => Next
+): Return
+```
+
+### handleYieldedValuesAsync
+```ts
+function handleYieldedValuesAsync<T, Return, Next>(
+  generator: Generator<T, Return, Next>
+, fn: (value: T, index: number) => PromiseLike<Next>
+): Promise<Return>
+function handleYieldedValuesAsync<T, Return, Next>(
+  generator: AsyncGenerator<T, Return, Next>
+, fn: (value: T, index: number) => Awaitable<Next>
+): Promise<Return>
+```
+
 ### of
 ```ts
 function of<T>(val: T): IterableIterator<T>

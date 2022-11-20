@@ -1,4 +1,4 @@
-import { lazy } from 'extra-lazy'
+import { lazy } from '@blackglory/prelude'
 
 interface IReusableAsyncIterable<T> extends AsyncIterable<T> {
   close(): Promise<void>

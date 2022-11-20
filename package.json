@@ -64,8 +64,6 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@blackglory/errors": "^2.3.0",
-    "@blackglory/go": "^1.1.2",
-    "extra-lazy": "^1.3.1"
+    "@blackglory/prelude": "^0.1.8"
   }
 }

@@ -1,4 +1,4 @@
-import { assert } from '@blackglory/errors'
+import { assert } from '@blackglory/prelude'
 
 /**
  * @throws {Error}

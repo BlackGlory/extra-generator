@@ -1,4 +1,4 @@
-import { lazy } from 'extra-lazy'
+import { lazy } from '@blackglory/prelude'
 
 interface IReusableIterable<T> extends Iterable<T> {
   close(): void
