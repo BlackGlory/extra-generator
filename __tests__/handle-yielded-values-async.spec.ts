@@ -79,7 +79,7 @@ describe('handleYieldedValuesAsync', () => {
       function* gen(): Generator<string, number, number> {
         let value1: number
         try {
-          value1 = yield '2'
+          value1 = yield '1'
         } catch {
           value1 = 1
         }
@@ -97,10 +97,10 @@ describe('handleYieldedValuesAsync', () => {
         throw customError
       })
 
-      const err = await getErrorPromise(handleYieldedValuesAsync(gen(), fn))
+      const result = await handleYieldedValuesAsync(gen(), fn)
 
-      expect(err).toBe(customError)
-      expect(fn).toBeCalledTimes(1)
+      expect(result).toBe(3)
+      expect(fn).toBeCalledTimes(2)
     })
   })
 })
