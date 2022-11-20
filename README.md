@@ -96,8 +96,17 @@ interface IMessage {
 function sse(message: IMessage): Iterable<string>
 ```
 
+### timestampBasedId
+```ts
+function timestampBasedId(): Iterator<[timestamp: number, num: number]>
+```
+
 ### ReusableIterable
 ```ts
+interface IReusableIterable<T> extends Iterable<T> {
+  close(): void
+}
+
 class ReusableIterable<T> implements IReusableIterable<T> {
   get done(): boolean | undefined
 
@@ -109,6 +118,10 @@ class ReusableIterable<T> implements IReusableIterable<T> {
 
 ### ReusableAsyncIterable
 ```ts
+interface IReusableAsyncIterable<T> extends AsyncIterable<T> {
+  close(): Promise<void>
+}
+
 class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
   get done(): boolean | undefined
 
@@ -116,9 +129,4 @@ class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
 
   close(): Promise<void>
 }
-```
-
-### timestampBasedId
-```ts
-function timestampBasedId(): Iterator<[timestamp: number, num: number]>
 ```
