@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.18](https://github.com/BlackGlory/extra-generator/compare/v0.2.17...v0.2.18) (2022-11-20)
+
+
+### Features
+
+* add `handleYieldedValues`, `handleYieldedValuesAsync` ([46e4627](https://github.com/BlackGlory/extra-generator/commit/46e46271147a85d7dca6853d808c763768d4091d))
+
 ### [0.2.17](https://github.com/BlackGlory/extra-generator/compare/v0.2.16...v0.2.17) (2022-08-01)
 
 ### [0.2.16](https://github.com/BlackGlory/extra-generator/compare/v0.2.15...v0.2.16) (2022-03-20)
