@@ -7,9 +7,9 @@ export async function handleYieldedValuesAsync<T, Return, Next>(
 ): Promise<Return> {
   let { value, done } = await generator.next()
 
-  let i = 0
+  let index = 0
   while (!done) {
-    const result = await toResultAsync(() => fn(value as T, i++))
+    const result = await toResultAsync(() => fn(value as T, index++))
     if (result.isOk()) {
       ;({ value, done } = await generator.next(result.unwrap()))
     } else {

@@ -6,9 +6,9 @@ export function handleYieldedValues<T, Return, Next>(
 ): Return {
   let { value, done } = generator.next()
 
-  let i = 0
+  let index = 0
   while (!done) {
-    const result = toResult(() => fn(value as T, i++))
+    const result = toResult(() => fn(value as T, index++))
     if (result.isOk()) {
       ;({ value, done } = generator.next(result.unwrap()))
     } else {
