@@ -1,6 +1,5 @@
 import { toArray } from 'iterable-operator'
 import { countdown } from '@src/countdown'
-import '@blackglory/jest-matchers'
 
 describe('countdown(begin: number, end: number): IterableIterator<number>', () => {
   describe('begin > end', () => {
@@ -8,7 +7,6 @@ describe('countdown(begin: number, end: number): IterableIterator<number>', () =
       const iter = countdown(2, -2)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([2, 1, 0, -1, -2])
     })
   })
@@ -18,7 +16,6 @@ describe('countdown(begin: number, end: number): IterableIterator<number>', () =
       const iter = countdown(1, 1)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([1])
     })
   })
@@ -28,7 +25,6 @@ describe('countdown(begin: number, end: number): IterableIterator<number>', () =
       const iter = countdown(0, 1)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([])
     })
   })

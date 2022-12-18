@@ -1,6 +1,5 @@
 import { stringifyNDJSONStreamAsync } from '@src/stringify-ndjson-stream-async'
 import { toAsyncIterable, toArrayAsync } from 'iterable-operator'
-import '@blackglory/jest-matchers'
 
 describe(`
   stringifyNDJSONStreamAsync<T>(
@@ -10,22 +9,20 @@ describe(`
   it('yield NDJSON', async () => {
     const arr = toAsyncIterable([1, 2])
 
-    const result = stringifyNDJSONStreamAsync(arr)
-    const proResult = (await toArrayAsync(result)).join('')
+    const iter = stringifyNDJSONStreamAsync(arr)
+    const result = (await toArrayAsync(iter)).join('')
 
-    expect(result).toBeAsyncIterable()
-    expect(proResult).toBe('1\n2')
+    expect(result).toBe('1\n2')
   })
 
   describe('empty iterable', () => {
     it('yield []', async () => {
       const arr = toAsyncIterable([])
 
-      const result = stringifyNDJSONStreamAsync(arr)
-      const proResult = (await toArrayAsync(result)).join('')
+      const iter = stringifyNDJSONStreamAsync(arr)
+      const result = (await toArrayAsync(iter)).join('')
 
-      expect(result).toBeAsyncIterable()
-      expect(proResult).toBe('')
+      expect(result).toBe('')
     })
   })
 })

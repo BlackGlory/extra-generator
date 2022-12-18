@@ -1,6 +1,5 @@
 import { sse } from '@src/sse'
 import { toArray } from 'iterable-operator'
-import '@blackglory/jest-matchers'
 
 describe('sse(message: IMessage): Iterable<string>', () => {
   it('yield string', () => {
@@ -9,16 +8,15 @@ describe('sse(message: IMessage): Iterable<string>', () => {
     const id = 'id'
     const retry = 100
 
-    const result = sse({
+    const iter = sse({
       event
     , data
     , id
     , retry
     })
-    const proResult = toArray(result)
+    const result = toArray(iter)
 
-    expect(result).toBeIterable()
-    expect(proResult).toEqual([
+    expect(result).toEqual([
       'event: event\n'
     , 'data: 1\n'
     , 'data: 2\n'
@@ -32,11 +30,10 @@ describe('sse(message: IMessage): Iterable<string>', () => {
     it('yield string', () => {
       const data = ''
 
-      const result = sse({ data })
-      const proResult = toArray(result)
+      const iter = sse({ data })
+      const result = toArray(iter)
 
-      expect(result).toBeIterable()
-      expect(proResult).toEqual([
+      expect(result).toEqual([
         'data: \n'
       , '\n'
       ])

@@ -1,6 +1,5 @@
 import { toArray } from 'iterable-operator'
 import { countup } from '@src/countup'
-import '@blackglory/jest-matchers'
 
 describe('countup(begin: number, end: number): IterableIterator<number>', () => {
   describe('begin < end', () => {
@@ -8,7 +7,6 @@ describe('countup(begin: number, end: number): IterableIterator<number>', () => 
       const iter = countup(-2, 2)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([-2, -1, 0, 1, 2])
     })
   })
@@ -18,7 +16,6 @@ describe('countup(begin: number, end: number): IterableIterator<number>', () => 
       const iter = countup(1, 1)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([1])
     })
   })
@@ -28,7 +25,6 @@ describe('countup(begin: number, end: number): IterableIterator<number>', () => 
       const iter = countup(1, 0)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([])
     })
   })

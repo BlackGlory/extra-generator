@@ -1,7 +1,6 @@
 import { toArray } from 'iterable-operator'
 import { getError } from 'return-style'
 import { range } from '@src/range'
-import '@blackglory/jest-matchers'
 
 describe('range(start: number, end: number): IterableIterator<number>', () => {
   describe('start = end', () => {
@@ -9,7 +8,6 @@ describe('range(start: number, end: number): IterableIterator<number>', () => {
       const iter = range(1, 1)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([])
     })
   })
@@ -19,7 +17,6 @@ describe('range(start: number, end: number): IterableIterator<number>', () => {
       const iter = range(-2, 2)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([-2, -1, 0, 1])
     })
   })
@@ -29,7 +26,6 @@ describe('range(start: number, end: number): IterableIterator<number>', () => {
       const iter = range(2, -2)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([2, 1, 0, -1])
     })
   })
@@ -41,7 +37,6 @@ describe('range(start: number, end: number, step: number) => IterableIterator<nu
       const iter = range(1, -1, 0.5)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([1, 0.5, 0, -0.5])
     })
   })

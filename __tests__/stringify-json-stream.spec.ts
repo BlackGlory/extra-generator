@@ -1,6 +1,5 @@
 import { stringifyJSONStream } from '@src/stringify-json-stream'
 import { toArray } from 'iterable-operator'
-import '@blackglory/jest-matchers'
 import { Readable } from 'stream'
 import { waitForEventEmitter } from '@blackglory/wait-for'
 
@@ -8,22 +7,20 @@ describe('stringifyJSONStream<T>(iterable: Iterable<T>): Iterable<string>', () =
   it('yield JSON', () => {
     const arr = [1, 2]
 
-    const result = stringifyJSONStream(arr)
-    const proResult = toArray(result).join('')
+    const iter = stringifyJSONStream(arr)
+    const result = toArray(iter).join('')
 
-    expect(result).toBeIterable()
-    expect(proResult).toBe('[1,2]')
+    expect(result).toBe('[1,2]')
   })
 
   describe('empty iterable', () => {
     it('yield []', () => {
       const arr: unknown[] = []
 
-      const result = stringifyJSONStream(arr)
-      const proResult = toArray(result).join('')
+      const iter = stringifyJSONStream(arr)
+      const result = toArray(iter).join('')
 
-      expect(result).toBeIterable()
-      expect(proResult).toBe('[]')
+      expect(result).toBe('[]')
     })
   })
 

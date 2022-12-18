@@ -1,6 +1,5 @@
 import { toArray, take } from 'iterable-operator'
 import { repeat } from '@src/repeat'
-import '@blackglory/jest-matchers'
 import { getError } from 'return-style'
 
 describe('repeat<T>(val: T, times: number): IterableIterator<T>', () => {
@@ -9,7 +8,6 @@ describe('repeat<T>(val: T, times: number): IterableIterator<T>', () => {
       const iter = repeat(1, 0)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([])
     })
   })
@@ -19,7 +17,6 @@ describe('repeat<T>(val: T, times: number): IterableIterator<T>', () => {
       const iter = repeat(1, 3)
       const arrResult = toArray(iter)
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([1, 1, 1])
     })
   })
@@ -29,7 +26,6 @@ describe('repeat<T>(val: T, times: number): IterableIterator<T>', () => {
       const iter = repeat(1, Infinity)
       const arrResult = toArray(take(iter, 3))
 
-      expect(iter).toBeIterable()
       expect(arrResult).toEqual([1, 1, 1])
     })
   })
