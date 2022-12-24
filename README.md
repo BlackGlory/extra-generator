@@ -150,3 +150,8 @@ class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
   close(): Promise<void>
 }
 ```
+
+### ngrams
+```ts
+function ngrams(text: string, n: number): IterableIterator<string>
+```
