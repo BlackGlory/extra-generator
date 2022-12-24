@@ -155,3 +155,8 @@ class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
 ```ts
 function ngrams(text: string, n: number): IterableIterator<string>
 ```
+
+### allNgrams
+```ts
+function allNgrams(text: string): IterableIterator<string>
+```
