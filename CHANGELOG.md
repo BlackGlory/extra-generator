@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.23](https://github.com/BlackGlory/extra-generator/compare/v0.2.22...v0.2.23) (2022-12-26)
+
+
+### Bug Fixes
+
+* export `ngrams`, `allNgrams` ([388e13b](https://github.com/BlackGlory/extra-generator/commit/388e13b6ca121e94de43eb15404094b9b04377ce))
+
 ### [0.2.22](https://github.com/BlackGlory/extra-generator/compare/v0.2.21...v0.2.22) (2022-12-24)
 
 
