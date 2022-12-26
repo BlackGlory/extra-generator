@@ -23,6 +23,9 @@ test('Exports', () => {
   , 'ReusableAsyncIterable'
 
   , 'timestampBasedId'
+
+  , 'allNgrams'
+  , 'ngrams'
   ].sort()
 
   const actualExports = Object.keys(Head).sort()
