@@ -1,4 +1,4 @@
-import { ReusableIterable } from '@src/reusable-iterable'
+import { ReusableIterable } from '@src/reusable-iterable.js'
 import { toArray } from 'iterable-operator'
 
 describe('ReusableIterable<T>', () => {

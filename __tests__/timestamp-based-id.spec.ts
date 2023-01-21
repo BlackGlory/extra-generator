@@ -1,4 +1,4 @@
-import { timestampBasedId } from '@src/timestamp-based-id'
+import { timestampBasedId } from '@src/timestamp-based-id.js'
 
 describe('timestampBasedId(): Iterator<[timestamp: number, num: number]>', () => {
   beforeEach(() => {

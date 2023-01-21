@@ -1,4 +1,4 @@
-import { allNgrams } from '@src/all-ngrams'
+import { allNgrams } from '@src/all-ngrams.js'
 import { toArray } from 'iterable-operator'
 
 describe('allNgrams', () => {

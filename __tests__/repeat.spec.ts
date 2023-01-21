@@ -1,5 +1,5 @@
 import { toArray, take } from 'iterable-operator'
-import { repeat } from '@src/repeat'
+import { repeat } from '@src/repeat.js'
 import { getError } from 'return-style'
 
 describe('repeat<T>(val: T, times: number): IterableIterator<T>', () => {

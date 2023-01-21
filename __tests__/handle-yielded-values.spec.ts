@@ -1,4 +1,4 @@
-import { handleYieldedValues } from '@src/handle-yielded-values'
+import { handleYieldedValues } from '@src/handle-yielded-values.js'
 import { getError } from 'return-style'
 
 describe('handleYieldedValues', () => {

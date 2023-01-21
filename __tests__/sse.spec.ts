@@ -1,4 +1,4 @@
-import { sse } from '@src/sse'
+import { sse } from '@src/sse.js'
 import { toArray } from 'iterable-operator'
 
 describe('sse(message: IMessage): Iterable<string>', () => {

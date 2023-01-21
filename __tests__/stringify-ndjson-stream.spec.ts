@@ -1,4 +1,4 @@
-import { stringifyNDJSONStream } from '@src/stringify-ndjson-stream'
+import { stringifyNDJSONStream } from '@src/stringify-ndjson-stream.js'
 import { toArray } from 'iterable-operator'
 
 describe('stringifyNDJSONStream<T>(iterable: Iterable<T>): Iterable<string>', () => {

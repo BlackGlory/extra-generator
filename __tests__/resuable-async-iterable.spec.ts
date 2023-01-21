@@ -1,4 +1,4 @@
-import { ReusableAsyncIterable } from '@src/reusable-async-iterable'
+import { ReusableAsyncIterable } from '@src/reusable-async-iterable.js'
 import { toArrayAsync } from 'iterable-operator'
 
 describe('ReusableAsyncIterable<T>', () => {

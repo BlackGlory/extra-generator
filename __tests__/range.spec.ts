@@ -1,6 +1,6 @@
 import { toArray } from 'iterable-operator'
 import { getError } from 'return-style'
-import { range } from '@src/range'
+import { range } from '@src/range.js'
 
 describe('range(start: number, end: number): IterableIterator<number>', () => {
   describe('start = end', () => {

@@ -1,4 +1,4 @@
-import * as Head from '@src/index'
+import * as Head from '@src/index.js'
 
 test('Exports', () => {
   const expectedExports: string[] = [

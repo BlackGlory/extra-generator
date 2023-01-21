@@ -1,4 +1,4 @@
-import { stringifyNDJSONStreamAsync } from '@src/stringify-ndjson-stream-async'
+import { stringifyNDJSONStreamAsync } from '@src/stringify-ndjson-stream-async.js'
 import { toAsyncIterable, toArrayAsync } from 'iterable-operator'
 
 describe(`

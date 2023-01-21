@@ -1,4 +1,4 @@
-import { stringifyJSONStream } from '@src/stringify-json-stream'
+import { stringifyJSONStream } from '@src/stringify-json-stream.js'
 import { toArray } from 'iterable-operator'
 import { Readable } from 'stream'
 import { waitForEventEmitter } from '@blackglory/wait-for'

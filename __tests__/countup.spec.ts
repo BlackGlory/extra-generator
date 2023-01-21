@@ -1,5 +1,5 @@
 import { toArray } from 'iterable-operator'
-import { countup } from '@src/countup'
+import { countup } from '@src/countup.js'
 
 describe('countup(begin: number, end: number): IterableIterator<number>', () => {
   describe('begin < end', () => {

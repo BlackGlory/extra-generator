@@ -1,4 +1,4 @@
-import { handleYieldedValuesAsync } from '@src/handle-yielded-values-async'
+import { handleYieldedValuesAsync } from '@src/handle-yielded-values-async.js'
 import { getErrorPromise } from 'return-style'
 
 describe('handleYieldedValuesAsync', () => {

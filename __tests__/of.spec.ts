@@ -1,5 +1,5 @@
 import { toArray } from 'iterable-operator'
-import { of } from '@src/of'
+import { of } from '@src/of.js'
 
 describe('of<T>(val: T): IterableIterator<T>', () => {
   it('return Iterable', () => {
