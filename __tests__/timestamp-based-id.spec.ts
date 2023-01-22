@@ -1,4 +1,5 @@
 import { timestampBasedId } from '@src/timestamp-based-id.js'
+import { jest } from '@jest/globals'
 
 describe('timestampBasedId(): Iterator<[timestamp: number, num: number]>', () => {
   beforeEach(() => {

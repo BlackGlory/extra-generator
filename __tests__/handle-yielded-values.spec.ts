@@ -1,5 +1,6 @@
 import { handleYieldedValues } from '@src/handle-yielded-values.js'
 import { getError } from 'return-style'
+import { jest } from '@jest/globals'
 
 describe('handleYieldedValues', () => {
   test('generator returns', () => {

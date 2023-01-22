@@ -1,5 +1,6 @@
 import { handleYieldedValuesAsync } from '@src/handle-yielded-values-async.js'
 import { getErrorPromise } from 'return-style'
+import { jest } from '@jest/globals'
 
 describe('handleYieldedValuesAsync', () => {
   test('generator returns', async () => {
