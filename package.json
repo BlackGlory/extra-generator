@@ -62,7 +62,7 @@
     "typescript-transform-paths": "^3.4.6"
   },
   "dependencies": {
-    "@blackglory/prelude": "^0.3.0",
-    "return-style": "^2.0.1"
+    "@blackglory/prelude": "^0.2.4",
+    "return-style": "^2.0.3"
   }
 }
