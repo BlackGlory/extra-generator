@@ -379,10 +379,10 @@
     justypes "^3.0.0"
     lodash "^4.17.21"
 
-"@blackglory/wait-for@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@blackglory/wait-for/-/wait-for-0.5.3.tgz#7bf265c6a7021b1c339b94ce6bd4bf31b83ff59f"
-  integrity sha512-0aaEM3X/GGq4dTb9PQgR1zDHkdqu+eQErIMEy259iSV9nDthGbi0SXA7N0XoKUTWI0vC9vGKmvaHH+fC/riL3A==
+"@blackglory/wait-for@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@blackglory/wait-for/-/wait-for-0.5.4.tgz#6525a35eb0da5647a39f87d96aea120befc79d85"
+  integrity sha512-HsTIiT0Vuqs8x1bh9IEULUr/qQ/0/LdsxdrUlVNGbIdrBzDo/bp7SbtMbSmKilHsefdrMQEBk4yCo12kXNQB9A==
   dependencies:
     "@blackglory/observe" "^0.1.7"
     "@blackglory/structures" "^0.11.3"
