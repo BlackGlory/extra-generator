@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/BlackGlory/extra-generator/compare/v0.3.3...v0.4.0) (2023-03-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* The minimal version of Node.js 16
+
+* upgrade dependencies ([9ca977a](https://github.com/BlackGlory/extra-generator/commit/9ca977af392936036b33a628c56fbaf5d3c06a81))
+
 ### [0.3.3](https://github.com/BlackGlory/extra-generator/compare/v0.3.2...v0.3.3) (2023-01-28)
 
 
