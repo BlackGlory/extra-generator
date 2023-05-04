@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/BlackGlory/extra-generator/compare/v0.4.0...v0.5.0) (2023-05-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* Removed `sse`
+
+* remove `sse` ([be88d15](https://github.com/BlackGlory/extra-generator/commit/be88d150a07b1924e9e206dfcb10ac5929c7fd6f))
+
 ## [0.4.0](https://github.com/BlackGlory/extra-generator/compare/v0.3.3...v0.4.0) (2023-03-18)
 
 
