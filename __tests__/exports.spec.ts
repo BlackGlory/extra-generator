@@ -17,8 +17,6 @@ test('Exports', () => {
   , 'stringifyNDJSONStream'
   , 'stringifyNDJSONStreamAsync'
 
-  , 'sse'
-
   , 'ReusableIterable'
   , 'ReusableAsyncIterable'
 

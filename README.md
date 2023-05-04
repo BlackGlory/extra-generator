@@ -104,18 +104,6 @@ function stringifyNDJSONStream<T>(iterable: Iterable<T>): Iterable<string>
 function stringifyNDJSONStreamAsync<T>(iterable: AsyncIterable<T>): AsyncIterable<string>
 ```
 
-### sse
-```ts
-interface IMessage {
-  event?: string
-  data: string
-  id?: string
-  retry?: number
-}
-
-function sse(message: IMessage): Iterable<string>
-```
-
 ### timestampBasedId
 ```ts
 function timestampBasedId(): Iterator<[timestamp: number, num: number]>
