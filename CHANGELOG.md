@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/BlackGlory/extra-generator/compare/v0.5.0...v0.5.1) (2023-06-10)
+
+
+### Bug Fixes
+
+* export src ([6d81174](https://github.com/BlackGlory/extra-generator/commit/6d81174daf2d724bd4aa580b045defab3ee5c85c))
+
 ## [0.5.0](https://github.com/BlackGlory/extra-generator/compare/v0.4.0...v0.5.0) (2023-05-04)
 
 
