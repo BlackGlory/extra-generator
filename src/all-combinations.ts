@@ -13,15 +13,18 @@ export function allCombinations<T, U extends number>(
   function* allCombinations<T, U extends number>(
     k: U
   , rest: T[]
-  , temp: T[] = []
+  , result: T[] = []
   ): IterableIterator<FixedLengthArray<T, U>> {
-    if (temp.length < k) {
+    if (result.length < k) {
       for (let i = 0; i < rest.length; i++) {
-        const newTemp = [...temp, rest[i]]
-        yield* allCombinations(k, rest.slice(i + 1), newTemp)
+        yield* allCombinations(
+          k
+        , rest.slice(i + 1)
+        , [...result, rest[i]]
+        )
       }
     } else {
-      yield temp as FixedLengthArray<T, U>
+      yield result as FixedLengthArray<T, U>
     }
   }
 }
