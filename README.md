@@ -148,3 +148,11 @@ function ngrams(text: string, n: number): IterableIterator<string>
 ```ts
 function allNgrams(text: string): IterableIterator<string>
 ```
+
+### allCombinations
+```ts
+function allCombinations<T, U extends number>(
+  arr: T[]
+, k: U
+): IterableIterator<FixedLengthArray<T, U>>
+```
