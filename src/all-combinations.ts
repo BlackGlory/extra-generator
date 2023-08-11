@@ -15,7 +15,9 @@ export function allCombinations<T, U extends number>(
   , rest: T[]
   , result: T[] = []
   ): IterableIterator<FixedLengthArray<T, U>> {
-    if (result.length < k) {
+    if (result.length === k) {
+      yield result as FixedLengthArray<T, U>
+    } else {
       for (let i = 0; i < rest.length; i++) {
         yield* allCombinations(
           k
@@ -23,8 +25,6 @@ export function allCombinations<T, U extends number>(
         , [...result, rest[i]]
         )
       }
-    } else {
-      yield result as FixedLengthArray<T, U>
     }
   }
 }
