@@ -15,12 +15,14 @@ export function allCombinations<T, U extends number>(
   , k: number
   ): IterableIterator<T[]> {
     for (let i = 0; i < arr.length; i++) {
+      const element = arr[i]
+
       if (k == 1) {
-        yield [arr[i]]
+        yield [element]
       } else {
         const rest = arr.slice(i + 1)
         for (const subCombination of allCombinations(rest, k - 1)) {
-          yield [arr[i], ...subCombination]
+          yield [element, ...subCombination]
         }
       }
     }
