@@ -26,6 +26,19 @@ describe('allCombinations', () => {
   describe('arr.length > k', () => {
     test('case 1', () => {
       const arr = [1, 2, 3]
+      const k = 1
+
+      const result = toArray(allCombinations(arr, k))
+
+      expect(result).toStrictEqual([
+        [1]
+      , [2]
+      , [3]
+      ])
+    })
+
+    test('case 2', () => {
+      const arr = [1, 2, 3]
       const k = 2
 
       const result = toArray(allCombinations(arr, k))
@@ -37,7 +50,7 @@ describe('allCombinations', () => {
       ])
     })
 
-    test('case 2', () => {
+    test('case 3', () => {
       const arr = [1, 2, 3, 4]
       const k = 2
 
