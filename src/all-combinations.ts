@@ -8,17 +8,17 @@ export function allCombinations<T, U extends number>(
   assert(k > 0, 'k must be greater than zero')
   assert(Number.isInteger(k), 'k must be an integer')
 
-  return allCombinations(arr, k)
+  return allCombinations(k, arr)
 
   function* allCombinations<T, U extends number>(
-    arr: T[]
-  , k: U
+    k: U
+  , rest: T[]
   , temp: T[] = []
   ): IterableIterator<FixedLengthArray<T, U>> {
     if (temp.length < k) {
-      for (let i = 0; i < arr.length; i++) {
-        const newTemp = [...temp, arr[i]]
-        yield* allCombinations(arr.slice(i + 1), k, newTemp)
+      for (let i = 0; i < rest.length; i++) {
+        const newTemp = [...temp, rest[i]]
+        yield* allCombinations(k, rest.slice(i + 1), newTemp)
       }
     } else {
       yield temp as FixedLengthArray<T, U>
