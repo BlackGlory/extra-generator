@@ -3,24 +3,42 @@ import { assert } from '@blackglory/prelude'
 /**
  * @throws {Error}
  */
-export function range(start: number, end: number, step: number = 1): IterableIterator<number> {
+export function range(
+  start: number
+, end: number
+, step: number = 1
+, inclusive: boolean = false
+): IterableIterator<number> {
   assert(step > 0, 'step parameter must be greater than 0')
 
-  return rangeByUnsignedStep(start, end, step)
+  return _range(start, end, step, inclusive)
 }
 
-function* rangeByUnsignedStep(
+function* _range(
   start: number
 , end: number
 , step: number
-): IterableIterator<number> {
+, inclusive: boolean
+) {
   if (start < end) {
-    for (let i = start; i < end; i += step) {
-      yield i
+    if (inclusive) {
+      for (let i = start; i <= end; i += step) {
+        yield i
+      }
+    } else {
+      for (let i = start; i < end; i += step) {
+        yield i
+      }
     }
   } else {
-    for (let i = start; i > end; i -= step) {
-      yield i
+    if (inclusive) {
+      for (let i = start; i >= end; i -= step) {
+        yield i
+      }
+    } else {
+      for (let i = start; i > end; i -= step) {
+        yield i
+      }
     }
   }
 }

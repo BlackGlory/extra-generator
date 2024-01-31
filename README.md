@@ -71,8 +71,12 @@ countup(1, 0) // []
 
 ### range
 ```ts
-function range(start: number, end: number, step: number = 1): IterableIterator<number>
-// assert(step > 0)
+function range(
+  start: number
+, end: number
+, step: number = 1 // step > 0
+, inclusive: boolean = false
+): IterableIterator<number>
 ```
 
 ```js
