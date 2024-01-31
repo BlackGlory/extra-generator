@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.4](https://github.com/BlackGlory/extra-generator/compare/v0.5.3...v0.5.4) (2024-01-31)
+
+
+### Features
+
+* **range:** add the new param `inclusive` ([b7355e4](https://github.com/BlackGlory/extra-generator/commit/b7355e4d607bcfed19c32f158da313e2a09c320a))
+
 ### [0.5.3](https://github.com/BlackGlory/extra-generator/compare/v0.5.2...v0.5.3) (2023-08-11)
 
 ### [0.5.2](https://github.com/BlackGlory/extra-generator/compare/v0.5.1...v0.5.2) (2023-08-11)
