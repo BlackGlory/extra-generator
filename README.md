@@ -47,6 +47,17 @@ repeat(1, 3) // [1, 1, 1]
 repeat(1, 0) // []
 ```
 
+### spawn
+```ts
+function spawn<T>(create: (num: number) => T, times: number = Infinity): IterableIterator<T>
+```
+
+```js
+spawn(x => x * 2) // [2, 4, 6, ...]
+spawn(x => x * 2, 3) // [2, 4, 6]
+spawn(x => x * 2, 0) // []
+```
+
 ### countdown
 ```ts
 function countdown(begin: number, end: number): IterableIterator<number>

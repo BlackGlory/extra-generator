@@ -7,6 +7,7 @@ test('Exports', () => {
 
   , 'of'
   , 'repeat'
+  , 'spawn'
 
   , 'countdown'
   , 'countup'
