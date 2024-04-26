@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.5](https://github.com/BlackGlory/extra-generator/compare/v0.5.4...v0.5.5) (2024-04-26)
+
+
+### Features
+
+* add `spawn` ([f6a7b1f](https://github.com/BlackGlory/extra-generator/commit/f6a7b1fe4e333dcba04e4efd8f412dc59f8e46e3))
+
 ### [0.5.4](https://github.com/BlackGlory/extra-generator/compare/v0.5.3...v0.5.4) (2024-01-31)
 
 
