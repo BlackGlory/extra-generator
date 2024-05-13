@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.6](https://github.com/BlackGlory/extra-generator/compare/v0.5.5...v0.5.6) (2024-05-13)
+
+
+### Features
+
+* add `allIndexCombinations` ([544eddb](https://github.com/BlackGlory/extra-generator/commit/544eddbb1ef49d80ad1fe5cba3532b227f523eb1))
+
 ### [0.5.5](https://github.com/BlackGlory/extra-generator/compare/v0.5.4...v0.5.5) (2024-04-26)
 
 
