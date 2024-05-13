@@ -171,3 +171,11 @@ function allCombinations<T, U extends number>(
 , k: U
 ): IterableIterator<FixedLengthArray<T, U>>
 ```
+
+### allIndexCombinations
+```ts
+function allIndexCombinations<T extends number>(
+  arr: unknown[]
+, k: T
+): IterableIterator<FixedLengthArray<number, T>>
+```

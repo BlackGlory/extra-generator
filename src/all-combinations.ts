@@ -1,30 +1,13 @@
-import { assert } from '@blackglory/prelude'
 import { FixedLengthArray } from 'justypes'
+import { allIndexCombinations } from './all-index-combinations.js'
+import { map } from 'iterable-operator'
 
 export function allCombinations<T, U extends number>(
   arr: T[]
 , k: U
 ): IterableIterator<FixedLengthArray<T, U>> {
-  assert(k > 0, 'k must be greater than zero')
-  assert(Number.isInteger(k), 'k must be an integer')
-
-  return allCombinations(arr, k) as IterableIterator<FixedLengthArray<T, U>>
-
-  function* allCombinations<T>(
-    arr: T[]
-  , k: number
-  ): IterableIterator<T[]> {
-    for (let i = 0; i < arr.length; i++) {
-      const element = arr[i]
-
-      if (k == 1) {
-        yield [element]
-      } else {
-        const rest = arr.slice(i + 1)
-        for (const subCombination of allCombinations(rest, k - 1)) {
-          yield [element, ...subCombination]
-        }
-      }
-    }
-  }
+  return map(
+    allIndexCombinations(arr, k)
+  , indexes => (indexes as number[]).map(i => arr[i]) as FixedLengthArray<T, U>
+  )
 }

@@ -27,6 +27,7 @@ test('Exports', () => {
   , 'ngrams'
 
   , 'allCombinations'
+  , 'allIndexCombinations'
   ].sort()
 
   const actualExports = Object.keys(Head).sort()
