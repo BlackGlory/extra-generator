@@ -166,16 +166,13 @@ function allNgrams(text: string): IterableIterator<string>
 
 ### allCombinations
 ```ts
-function allCombinations<T, U extends number>(
-  arr: T[]
-, k: U
-): IterableIterator<FixedLengthArray<T, U>>
+function allCombinations<T>(arr: T[], k: number): IterableIterator<T[]>
 ```
 
 ### allIndexCombinations
 ```ts
-function allIndexCombinations<T extends number>(
+function allIndexCombinations(
   arr: unknown[]
-, k: T
-): IterableIterator<FixedLengthArray<number, T>>
+, k: number
+): IterableIterator<number[]>
 ```

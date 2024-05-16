@@ -1,14 +1,13 @@
 import { assert } from '@blackglory/prelude'
-import { FixedLengthArray } from 'justypes'
 
-export function allIndexCombinations<T extends number>(
+export function allIndexCombinations(
   arr: unknown[]
-, k: T
-): IterableIterator<FixedLengthArray<number, T>> {
+, k: number
+): IterableIterator<number[]> {
   assert(k > 0, 'k must be greater than zero')
   assert(Number.isInteger(k), 'k must be an integer')
 
-  return allCombinationIndexes(arr, k) as IterableIterator<FixedLengthArray<number, T>>
+  return allCombinationIndexes(arr, k)
 
   function* allCombinationIndexes<T>(
     arr: T[]

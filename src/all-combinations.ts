@@ -1,13 +1,9 @@
-import { FixedLengthArray } from 'justypes'
 import { allIndexCombinations } from './all-index-combinations.js'
 import { map } from 'iterable-operator'
 
-export function allCombinations<T, U extends number>(
-  arr: T[]
-, k: U
-): IterableIterator<FixedLengthArray<T, U>> {
+export function allCombinations<T>(arr: T[], k: number): IterableIterator<T[]> {
   return map(
     allIndexCombinations(arr, k)
-  , indexes => (indexes as number[]).map(i => arr[i]) as FixedLengthArray<T, U>
+  , indexes => (indexes as number[]).map(i => arr[i])
   )
 }
