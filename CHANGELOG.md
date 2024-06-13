@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.8](https://github.com/BlackGlory/extra-generator/compare/v0.5.7...v0.5.8) (2024-06-13)
+
+
+### Features
+
+* add `positiveFactors`, `positiveCommonDivisors` ([5e1a6a1](https://github.com/BlackGlory/extra-generator/commit/5e1a6a1abac264b56c84dd14aa0ff8d2c8982136))
+
 ### [0.5.7](https://github.com/BlackGlory/extra-generator/compare/v0.5.6...v0.5.7) (2024-05-16)
 
 ### [0.5.6](https://github.com/BlackGlory/extra-generator/compare/v0.5.5...v0.5.6) (2024-05-13)
