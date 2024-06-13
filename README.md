@@ -176,3 +176,25 @@ function allIndexCombinations(
 , k: number
 ): IterableIterator<number[]>
 ```
+
+### positiveFactors
+```ts
+function positiveFactors(value: number): IterableIterator<number>
+```
+
+```ts
+positiveFactors(0) // []
+positiveFactors(10) // [10, 5, 2, 1]
+positiveFactors(-10) // [10, 5, 2, 1]
+```
+
+### positiveCommonDivisors
+```ts
+function positiveCommonDivisors(a: number, b: number): IterableIterator<number>
+```
+
+```ts
+positiveCommonDivisors(0, 0) // []
+positiveCommonDivisors(12, 8) // [4, 2, 1]
+positiveCommonDivisors(-12, 8) // [4, 2, 1]
+```

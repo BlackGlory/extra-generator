@@ -28,6 +28,9 @@ test('Exports', () => {
 
   , 'allCombinations'
   , 'allIndexCombinations'
+
+  , 'positiveFactors'
+  , 'positiveCommonDivisors'
   ].sort()
 
   const actualExports = Object.keys(Head).sort()
