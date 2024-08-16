@@ -31,6 +31,8 @@ test('Exports', () => {
 
   , 'positiveFactors'
   , 'positiveCommonDivisors'
+
+  , 'reverse'
   ].sort()
 
   const actualExports = Object.keys(Head).sort()

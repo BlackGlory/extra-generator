@@ -198,3 +198,8 @@ positiveCommonDivisors(0, 0) // []
 positiveCommonDivisors(12, 8) // [4, 2, 1]
 positiveCommonDivisors(-12, 8) // [4, 2, 1]
 ```
+
+### reverse
+```ts
+function reverse<T>(arr: ArrayLike<T>): IterableIterator<T>
+```
