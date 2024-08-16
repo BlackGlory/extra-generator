@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.9](https://github.com/BlackGlory/extra-generator/compare/v0.5.8...v0.5.9) (2024-08-16)
+
+
+### Features
+
+* add `reverse` ([28509b4](https://github.com/BlackGlory/extra-generator/commit/28509b464cd0c1c971f931ac34b0a60a1cdfcd3d))
+
 ### [0.5.8](https://github.com/BlackGlory/extra-generator/compare/v0.5.7...v0.5.8) (2024-06-13)
 
 
