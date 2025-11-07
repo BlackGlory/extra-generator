@@ -52,13 +52,20 @@ describe('range', () => {
     })
   })
 
-  describe('with step', () => {
+  describe('with custom step', () => {
     describe('step > 0', () => {
-      it('return iterable[start:end] by step', () => {
+      test('current + step does not exceed end', () => {
         const iter = range(1, -1, 0.5)
         const arrResult = toArray(iter)
 
         expect(arrResult).toEqual([1, 0.5, 0, -0.5])
+      })
+
+      test('current + step exceeds end', () => {
+        const iter = range(1, -1, 0.75)
+        const arrResult = toArray(iter)
+
+        expect(arrResult).toEqual([1, 0.25, -0.5])
       })
     })
 
