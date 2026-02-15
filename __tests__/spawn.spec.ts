@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { toArray, take } from 'iterable-operator'
 import { spawn } from '@src/spawn.js'
 import { getError } from 'return-style'

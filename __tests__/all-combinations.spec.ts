@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { toArray } from '@blackglory/prelude'
 import { allCombinations } from '@src/all-combinations.js'
 import { getError } from 'return-style'
@@ -89,7 +90,6 @@ describe('allCombinations', () => {
     const arr = [1, 2, 3]
     const k = 0.5
 
-    // @ts-ignore
     const err = getError(() => allCombinations(arr, k))
 
     expect(err?.message).toMatch('k must be an integer')

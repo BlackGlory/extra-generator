@@ -1,8 +1,9 @@
+import { describe, test, expect } from 'vitest'
 import { ContinuableAsyncIterable } from '@src/continuable-async-iterable.js'
 import { toArrayAsync } from 'iterable-operator'
 
 describe('ContinuableAsyncIterable<T>', () => {
-  test('reusable', async () => {
+  test('continuable', async () => {
     async function* gen() {
       yield 1
       yield 2

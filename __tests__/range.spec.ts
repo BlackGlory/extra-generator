@@ -1,3 +1,4 @@
+import { describe, test, it, expect } from 'vitest'
 import { toArray } from 'iterable-operator'
 import { getError } from 'return-style'
 import { range } from '@src/range.js'

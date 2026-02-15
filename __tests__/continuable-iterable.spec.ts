@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { ContinuableIterable } from '@src/continuable-iterable.js'
 import { toArray } from 'iterable-operator'
 

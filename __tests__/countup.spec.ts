@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { toArray } from 'iterable-operator'
 import { countup } from '@src/countup.js'
 

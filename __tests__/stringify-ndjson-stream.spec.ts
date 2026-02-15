@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { stringifyNDJSONStream } from '@src/stringify-ndjson-stream.js'
 import { toArray } from 'iterable-operator'
 

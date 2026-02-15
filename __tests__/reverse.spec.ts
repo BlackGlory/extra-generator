@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { toArray } from 'iterable-operator'
 import { reverse } from '@src/reverse.js'
 

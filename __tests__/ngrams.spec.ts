@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { ngrams } from '@src/ngrams.js'
 import { toArray } from 'iterable-operator'
 

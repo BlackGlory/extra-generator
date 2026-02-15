@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { stringifyJSONStreamAsync } from '@src/stringify-json-stream-async.js'
 import { toAsyncIterable, toArrayAsync } from 'iterable-operator'
 import { Readable } from 'stream'

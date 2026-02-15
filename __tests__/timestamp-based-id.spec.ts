@@ -1,19 +1,19 @@
+import { describe, test, beforeEach, afterEach, vi, expect } from 'vitest'
 import { timestampBasedId } from '@src/timestamp-based-id.js'
-import { jest } from '@jest/globals'
 
 describe('timestampBasedId(): Iterator<[timestamp: number, num: number]>', () => {
   beforeEach(() => {
-    jest.useFakeTimers()
+    vi.useFakeTimers()
   })
 
   afterEach(() => {
-    jest.useRealTimers()
+    vi.useRealTimers()
   })
 
   test('same timestamp', () => {
     const iter = timestampBasedId()
 
-    jest.setSystemTime(100)
+    vi.setSystemTime(100)
     const result1 = iter.next().value
     const result2 = iter.next().value
 
@@ -24,9 +24,9 @@ describe('timestampBasedId(): Iterator<[timestamp: number, num: number]>', () =>
   test('different timestamp', () => {
     const iter = timestampBasedId()
 
-    jest.setSystemTime(100)
+    vi.setSystemTime(100)
     const result1 = iter.next().value
-    jest.setSystemTime(101)
+    vi.setSystemTime(101)
     const result2 = iter.next().value
 
     expect(result1).toStrictEqual([100, 0])

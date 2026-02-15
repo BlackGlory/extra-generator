@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { stringifyJSONStream } from '@src/stringify-json-stream.js'
 import { toArray } from 'iterable-operator'
 import { Readable } from 'stream'

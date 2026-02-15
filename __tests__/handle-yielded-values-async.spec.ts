@@ -1,6 +1,6 @@
+import { describe, test, expect, vi } from 'vitest'
 import { handleYieldedValuesAsync } from '@src/handle-yielded-values-async.js'
 import { getErrorPromise } from 'return-style'
-import { jest } from '@jest/globals'
 
 describe('handleYieldedValuesAsync', () => {
   test('generator returns', async () => {
@@ -9,7 +9,7 @@ describe('handleYieldedValuesAsync', () => {
       const value2 = yield '2'
       return value1 + value2
     }
-    const fn = jest.fn((x: string) => Number(x))
+    const fn = vi.fn((x: string) => Number(x))
 
     const result = await handleYieldedValuesAsync(gen(), fn)
 
@@ -23,7 +23,7 @@ describe('handleYieldedValuesAsync', () => {
     function* gen(): Generator<string, number, number> {
       return yield '1'
     }
-    const fn = jest.fn((x: string) => Number(x))
+    const fn = vi.fn((x: string) => Number(x))
 
     const result = await handleYieldedValuesAsync(gen(), fn)
 
@@ -36,7 +36,7 @@ describe('handleYieldedValuesAsync', () => {
     function* gen(): Generator<string, number, number> {
       return 1
     }
-    const fn = jest.fn((x: string) => Number(x))
+    const fn = vi.fn((x: string) => Number(x))
 
     const result = await handleYieldedValuesAsync(gen(), fn)
 
@@ -49,7 +49,7 @@ describe('handleYieldedValuesAsync', () => {
     function* gen(): Generator<string, number, number> {
       throw customError
     }
-    const fn = jest.fn((x: string) => Number(x))
+    const fn = vi.fn((x: string) => Number(x))
 
     const err = await getErrorPromise(handleYieldedValuesAsync(gen(), fn))
 
@@ -65,7 +65,7 @@ describe('handleYieldedValuesAsync', () => {
           const value2 = yield '2'
           return value1 + value2
       }
-      const fn = jest.fn((_: string) => {
+      const fn = vi.fn((_: string) => {
         throw customError
       })
 
@@ -94,7 +94,7 @@ describe('handleYieldedValuesAsync', () => {
 
         return value1 + value2
       }
-      const fn = jest.fn((_: string) => {
+      const fn = vi.fn((_: string) => {
         throw customError
       })
 
