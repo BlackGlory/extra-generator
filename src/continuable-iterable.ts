@@ -1,10 +1,10 @@
 import { lazy } from '@blackglory/prelude'
 
-interface IReusableIterable<T> extends Iterable<T> {
+interface IContinuableIterable<T> extends Iterable<T> {
   close(): void
 }
 
-export class ReusableIterable<T> implements IReusableIterable<T> {
+export class ContinuableIterable<T> implements IContinuableIterable<T> {
   private _done: boolean | undefined
   private getIterator: () => Iterator<T>
 

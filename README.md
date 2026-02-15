@@ -125,13 +125,13 @@ function stringifyNDJSONStreamAsync<T>(iterable: AsyncIterable<T>): AsyncIterabl
 function timestampBasedId(): Iterator<[timestamp: number, num: number]>
 ```
 
-### ReusableIterable
+### ContinuableIterable
 ```ts
-interface IReusableIterable<T> extends Iterable<T> {
+interface IContinuableIterable<T> extends Iterable<T> {
   close(): void
 }
 
-class ReusableIterable<T> implements IReusableIterable<T> {
+class ContinuableIterable<T> implements IContinuableIterable<T> {
   get done(): boolean | undefined
 
   constructor(iterable: Iterable<T>)
@@ -140,13 +140,13 @@ class ReusableIterable<T> implements IReusableIterable<T> {
 }
 ```
 
-### ReusableAsyncIterable
+### ContinuableAsyncIterable
 ```ts
-interface IReusableAsyncIterable<T> extends AsyncIterable<T> {
+interface IContinuableAsyncIterable<T> extends AsyncIterable<T> {
   close(): Promise<void>
 }
 
-class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
+class ContinuableAsyncIterable<T> implements IContinuableAsyncIterable<T> {
   get done(): boolean | undefined
 
   constructor(iterable: AsyncIterable<T>)

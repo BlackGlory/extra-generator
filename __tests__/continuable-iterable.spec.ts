@@ -1,14 +1,14 @@
-import { ReusableIterable } from '@src/reusable-iterable.js'
+import { ContinuableIterable } from '@src/continuable-iterable.js'
 import { toArray } from 'iterable-operator'
 
-describe('ReusableIterable<T>', () => {
+describe('ContinuableIterable<T>', () => {
   test('reusable', () => {
     function* gen() {
       yield 1
       yield 2
     }
 
-    const reusableGen = new ReusableIterable(gen())
+    const reusableGen = new ContinuableIterable(gen())
     for (const _ of reusableGen) {
       break
     }
@@ -27,7 +27,7 @@ describe('ReusableIterable<T>', () => {
       yield 2
     }
 
-    const reusableGen = new ReusableIterable(gen())
+    const reusableGen = new ContinuableIterable(gen())
     for (const _ of reusableGen) {
       break
     }

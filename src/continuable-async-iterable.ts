@@ -1,10 +1,10 @@
 import { lazy } from '@blackglory/prelude'
 
-interface IReusableAsyncIterable<T> extends AsyncIterable<T> {
+interface IContinuableAsyncIterable<T> extends AsyncIterable<T> {
   close(): Promise<void>
 }
 
-export class ReusableAsyncIterable<T> implements IReusableAsyncIterable<T> {
+export class ContinuableAsyncIterable<T> implements IContinuableAsyncIterable<T> {
   private _done: boolean | undefined
   private getIterator: () => AsyncIterator<T>
 

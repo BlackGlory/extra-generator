@@ -1,14 +1,14 @@
-import { ReusableAsyncIterable } from '@src/reusable-async-iterable.js'
+import { ContinuableAsyncIterable } from '@src/continuable-async-iterable.js'
 import { toArrayAsync } from 'iterable-operator'
 
-describe('ReusableAsyncIterable<T>', () => {
+describe('ContinuableAsyncIterable<T>', () => {
   test('reusable', async () => {
     async function* gen() {
       yield 1
       yield 2
     }
 
-    const reusableGen = new ReusableAsyncIterable(gen())
+    const reusableGen = new ContinuableAsyncIterable(gen())
     for await (const _ of reusableGen) {
       break
     }
@@ -27,7 +27,7 @@ describe('ReusableAsyncIterable<T>', () => {
       yield 2
     }
 
-    const reusableGen = new ReusableAsyncIterable(gen())
+    const reusableGen = new ContinuableAsyncIterable(gen())
     for await (const _ of reusableGen) {
       break
     }
