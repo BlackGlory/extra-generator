@@ -3,7 +3,7 @@ import { ContinuableIterable } from '@src/continuable-iterable.js'
 import { toArray } from 'iterable-operator'
 
 describe('ContinuableIterable<T>', () => {
-  test('reusable', () => {
+  test('continuable', () => {
     function* gen() {
       yield 1
       yield 2
