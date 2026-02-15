@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/BlackGlory/extra-generator/compare/v0.5.9...v0.6.0) (2026-02-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node.js v16 => Node.js v22
+* - Renamed `ReusableIterable` to `ContinuableIterable`
+- Renamed `ReusableAsyncIterable` to `ContinuableAsyncIterable`
+
+### Features
+
+* rename ([ce56d8e](https://github.com/BlackGlory/extra-generator/commit/ce56d8e2879a73305bc51218d67c0a462f581763))
+
+
+* upgrade dependencies ([1b1d6ee](https://github.com/BlackGlory/extra-generator/commit/1b1d6eeb3f84b10b1e5d6d6c1dca0cf47eb49c39))
+
 ### [0.5.9](https://github.com/BlackGlory/extra-generator/compare/v0.5.8...v0.5.9) (2024-08-16)
 
 
