@@ -196,6 +196,7 @@ function positiveCommonDivisors(a: number, b: number): IterableIterator<number>
 
 ```ts
 positiveCommonDivisors(0, 0) // []
+positiveCommonDivisors(4, 0) // [4, 2, 1]
 positiveCommonDivisors(12, 8) // [4, 2, 1]
 positiveCommonDivisors(-12, 8) // [4, 2, 1]
 ```

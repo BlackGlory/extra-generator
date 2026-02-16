@@ -41,12 +41,21 @@ describe.each([
 
     const result = toArray(positiveCommonDivisors(a, b))
 
-    expect(result).toStrictEqual([])
+    expect(result).toStrictEqual([8, 4, 2, 1])
   })
 
   test('b = 0', () => {
     const a = 12 * aSign
     const b = 0 * bSign
+
+    const result = toArray(positiveCommonDivisors(a, b))
+
+    expect(result).toStrictEqual([12, 6, 4, 3, 2, 1])
+  })
+
+  test('a = 0, b = 0', () => {
+    const a = 0
+    const b = 0
 
     const result = toArray(positiveCommonDivisors(a, b))
 
