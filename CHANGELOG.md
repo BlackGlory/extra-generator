@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/BlackGlory/extra-generator/compare/v0.6.0...v0.7.0) (2026-02-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **positive-common-divisors:** Changed the behavior when one of `a` and `b` is 0.
+
+### Features
+
+* **positive-common-divisors:** make the function conform to the mathematical definition ([8d1b526](https://github.com/BlackGlory/extra-generator/commit/8d1b5268934dfcc95b89514d4f2b9fcbfdcac215))
+
 ## [0.6.0](https://github.com/BlackGlory/extra-generator/compare/v0.5.9...v0.6.0) (2026-02-15)
 
 
