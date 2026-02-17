@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://github.com/BlackGlory/extra-generator/compare/v0.7.0...v0.7.1) (2026-02-17)
+
+
+### Features
+
+* **ngrams:** add parameter validators ([33684b0](https://github.com/BlackGlory/extra-generator/commit/33684b0d5e37b0d32fe36101e6285e68fe6f2f48))
+
 ## [0.7.0](https://github.com/BlackGlory/extra-generator/compare/v0.6.0...v0.7.0) (2026-02-16)
 
 
