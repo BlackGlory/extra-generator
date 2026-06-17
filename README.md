@@ -95,7 +95,7 @@ This iterator is essentially a variant of the for loop.
 ```js
 range(1, 1) // []
 range(-1, 1) // [-1, 0]
-range(-1, 1, true) // [-1, 0, 1]
+range(-1, 1, undefined, true) // [-1, 0, 1]
 range(1, -1, 0.5) // [1, 0.5, 0, -0.5]
 range(1, -1, 0.75) // [1, 0.25, -0.5]
 ```
